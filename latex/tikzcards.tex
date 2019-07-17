@@ -130,6 +130,19 @@
   \end{scope}
 }
 
+\newcommand{\cardtypewithbg}[3]{
+  % The \clip command does not allow options, therefore  we have to use a scope to set the even odd rule.
+  \begin{scope}[even odd rule]
+    % Define a clipping path. All paths outside shapeCard will be cut because the even odd rule is set.
+    \clip[cardcorners] \shapeBackground;
+    % Since the even odd rule is set, only the card will be filled.
+    \fill[strip,#1] \shapeStrip (\strippadding+0.5*\stripwidth+\borderwidth,\cardheight-\borderwidth-\textpadding) node[rotate=90, left] {
+      \color{white}\uppercase{#2}%
+    };
+  \end{scope}
+  \cardbackground{#3}
+}
+
 %% Title (arg #1) of the card, written on shapeTitle
 \newcommand{\cardtitle}[1]{
   \fill[elementcorners,titlebg,opacity=.85] \shapeTitle;
@@ -159,13 +172,17 @@
 }
 
 %% given card types, shorthand
-\newcommand{\cardtypePop}{\cardtype{popbg}{{Culture populaire}}}
-\newcommand{\cardtypeHard}{\cardtype{hardbg}{{Matériel}}}
-\newcommand{\cardtypeSoft}{\cardtype{softbg}{{Logiciel}}}
-\newcommand{\cardtypeLang}{\cardtype{langbg}{{Langages de programmation}}}
-\newcommand{\cardtypeTheory}{\cardtype{theorybg}{{Fondements et concepts}}}
-\newcommand{\cardtypeGame}{\cardtype{gamebg}{{Jeux vidéos}}}
-\newcommand{\cardtypeWeb}{\cardtype{webbg}{{Réseaux et web}}}
-\newcommand{\cardtypeMan}{\cardtype{manbg}{{Personnalité}}}
-\newcommand{\cardtypeUniv}{\cardtype{univbg}{{Institution}}}
+\newcommand{\cardtypeDrawing}{\cardtypewithbg{popbg}{{Draw}}{./imgs/drawing.png}}
+\newcommand{\cardtypeActing}{\cardtypewithbg{softbg}{{Act}}{./imgs/acting.png}}
+\newcommand{\cardtypeSpeaking}{\cardtypewithbg{hardbg}{{Speak}}{./imgs/speaking.png}}
+\newcommand{\cardtypeJoker}{\cardtypewithbg{theorybg}{{Joker}}{./imgs/joker.png}}
+% \newcommand{\cardtypePop}{\cardtype{popbg}{{Culture populaire}}}
+% \newcommand{\cardtypeHard}{\cardtype{hardbg}{{Matériel}}}
+% \newcommand{\cardtypeSoft}{\cardtype{softbg}{{Logiciel}}}
+% \newcommand{\cardtypeLang}{\cardtype{langbg}{{Langages de programmation}}}
+% \newcommand{\cardtypeTheory}{\cardtype{theorybg}{{Fondements et concepts}}}
+% \newcommand{\cardtypeGame}{\cardtype{gamebg}{{Jeux vidéos}}}
+% \newcommand{\cardtypeWeb}{\cardtype{webbg}{{Réseaux et web}}}
+% \newcommand{\cardtypeMan}{\cardtype{manbg}{{Personnalité}}}
+% \newcommand{\cardtypeUniv}{\cardtype{univbg}{{Institution}}}
 

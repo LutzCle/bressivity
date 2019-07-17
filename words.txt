@@ -1,0 +1,33 @@
+Graphics Processing Unit
+research challenge
+query optimizer
+bottleneck
+library
+response time
+heuristic
+hybrid query processing engine
+Random Access Memory
+PhD project
+preliminary results
+coprocessor
+future work
+approximation function
+self tuning cycle
+speed-up
+forensics
+static code analysis
+attention
+security threat
+data protection legislation
+control flow
+password cracker
+address space
+micro-benchmark
+cost estimation
+component
+distribute
+tuple identifier
+utilize
+aggregate
+column scan
+introduce
