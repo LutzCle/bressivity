@@ -31,3 +31,39 @@ utilize
 aggregate
 column scan
 introduce
+hawk
+code variant
+order-of-magnitude
+power wall
+SQL
+operator fusion
+loop
+hash table
+translate
+pipeline breaker
+machine code
+cache thrashing
+heap contention
+query chopping
+star schema
+starvation
+footprint
+workload
+fault tolerance
+deadlock
+data placement
+statistics
+chaining
+data transfer overhead
+compile-time
+fallback
+skip
+cardinality
+concurrency
+CPU socket
+vector
+transaction processing council
+critical path
+intermediate result
+resource consumption
+backtracking
